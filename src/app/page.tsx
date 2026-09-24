@@ -1,6 +1,8 @@
 import { projects, type Project } from "@/data/projects";
 
 const githubProfileUrl = "https://github.com/TomonoriYoshida";
+const contactEmail = "tomonori.yoshida.works@gmail.com";
+const languages = ["C", "C++", "C#", "Java", "PHP"];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -52,19 +54,58 @@ export default function Home() {
       <header>
         <p className="font-mono text-sm text-accent">Portfolio</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-          Tomonori Yoshida
+          Yoshida
         </h1>
-        <p className="mt-4 leading-7 text-muted">
-          制作したプロジェクトと、そのソースコードを掲載しています。
+        <p className="mt-2 font-medium">
+          ソフトウェアエンジニア — バックエンド / 設計 / プロジェクトマネジメント
         </p>
-        <a
-          href={githubProfileUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-block text-sm font-medium text-accent underline-offset-4 hover:underline"
-        >
-          GitHub ↗
-        </a>
+
+        <div className="mt-6 space-y-4 leading-7 text-muted">
+          <p>
+            C言語からキャリアを始め、Windowsのパッケージアプリケーションと業務向けWebアプリケーションの開発に携わってきました。
+          </p>
+          <p>
+            現在はPHP / Laravelによるバックエンド開発を軸に、API設計、シングルサインオン（SSO）の導入、形式がそろっていない外部データの取込・整形、テストとCIによる品質の担保を得意としています。
+          </p>
+          <p>
+            プロジェクトマネージャーとしてチームを率いた経験もあり、エンドユーザーへのヒアリングを含む要件整理から、設計・実装・運用まで一貫して担当できます。
+          </p>
+          <p>
+            フロントエンドもAIを活用して対応範囲を広げており、小〜中規模の案件は画面まで含めてご相談いただけます。
+          </p>
+        </div>
+
+        <dl className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <dt className="text-sm font-semibold">扱える言語</dt>
+          {languages.map((language) => (
+            <dd
+              key={language}
+              className="rounded-full border border-border px-3 py-1 font-mono text-xs"
+            >
+              {language}
+            </dd>
+          ))}
+        </dl>
+
+        <div className="mt-8 rounded-xl border border-border bg-surface p-5">
+          <p className="text-sm font-semibold">業務委託でのご依頼を承っています</p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <a
+              href={`mailto:${contactEmail}`}
+              className="font-medium text-accent underline-offset-4 hover:underline"
+            >
+              {contactEmail}
+            </a>
+            <a
+              href={githubProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-accent underline-offset-4 hover:underline"
+            >
+              GitHub ↗
+            </a>
+          </div>
+        </div>
       </header>
 
       <section className="mt-16">
@@ -79,7 +120,7 @@ export default function Home() {
       </section>
 
       <footer className="mt-24 border-t border-border pt-6 text-xs text-muted">
-        © Tomonori Yoshida
+        © Yoshida
       </footer>
     </main>
   );

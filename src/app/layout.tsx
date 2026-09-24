@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tomonori Yoshida | Portfolio",
-  description: "Tomonori Yoshida のポートフォリオ。制作したプロジェクトとソースコードを掲載しています。",
+  title: "Yoshida | Portfolio",
+  description: "バックエンド開発・設計・プロジェクトマネジメントを手がけるソフトウェアエンジニア Yoshida のポートフォリオです。",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
