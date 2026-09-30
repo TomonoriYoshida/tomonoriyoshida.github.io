@@ -37,8 +37,12 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "GitHub リポジトリ",
+        label: "API（GitHub）",
         href: "https://github.com/TomonoriYoshida/medical-facility-master-api-laravel",
+      },
+      {
+        label: "デモ用フロントエンド（GitHub）",
+        href: "https://github.com/TomonoriYoshida/medical-facility-frontend",
       },
     ],
     demoStatus: "デモ公開準備中",
