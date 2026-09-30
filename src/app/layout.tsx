@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [ogImage],
   },
+  // Google Search Console ownership of https://tomonoriyoshida.github.io/ (covers the project sites too).
+  verification: {
+    google: "M9Oz3MuW8YHMzxGZgHDxYTZzAG4NZfIBnjw_vvrcfLU",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
