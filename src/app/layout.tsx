@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ogImage, siteDescription, siteTitle, siteUrl } from "@/data/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +14,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yoshida | Portfolio",
-  description: "バックエンド開発・設計・プロジェクトマネジメントを手がけるソフトウェアエンジニア Yoshida のポートフォリオです。",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+  // Shown when the URL is shared (Slack, X, LINE, ...).
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: siteTitle,
+    title: siteTitle,
+    description: siteDescription,
+    locale: "ja_JP",
+    images: [ogImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
