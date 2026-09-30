@@ -1,4 +1,5 @@
 import { projects, type Project } from "@/data/projects";
+import { siteDescription, siteUrl } from "@/data/site";
 
 const githubProfileUrl = "https://github.com/TomonoriYoshida";
 const contactEmail = "tomonori.yoshida.works@gmail.com";
@@ -48,9 +49,34 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
+/**
+ * Structured data telling search engines this is one person's profile page,
+ * with the same facts the page shows (schema.org ProfilePage / Person).
+ */
+const profileJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: `${siteUrl}/`,
+  description: siteDescription,
+  mainEntity: {
+    "@type": "Person",
+    name: "Yoshida",
+    url: `${siteUrl}/`,
+    jobTitle: "ソフトウェアエンジニア",
+    description: "バックエンド開発、API設計、プロジェクトマネジメントを手がけるソフトウェアエンジニア",
+    knowsAbout: [...languages, "Laravel", "API設計", "プロジェクトマネジメント"],
+    sameAs: [githubProfileUrl],
+  },
+};
+
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-16 sm:px-6 sm:py-24">
+      <script
+        type="application/ld+json"
+        // Escaping "<" keeps the JSON from closing the script tag early.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileJsonLd).replace(/</g, "\\u003c") }}
+      />
       <header>
         <p className="font-mono text-sm text-accent">Portfolio</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
