@@ -37,6 +37,14 @@ export const projects: Project[] = [
     ],
     links: [
       {
+        label: "デモサイト",
+        href: "https://tomonoriyoshida.github.io/medical-facility-frontend/",
+      },
+      {
+        label: "API仕様書",
+        href: "https://168-110-42-30.sslip.io/docs/api",
+      },
+      {
         label: "API（GitHub）",
         href: "https://github.com/TomonoriYoshida/medical-facility-master-api-laravel",
       },
@@ -45,6 +53,5 @@ export const projects: Project[] = [
         href: "https://github.com/TomonoriYoshida/medical-facility-frontend",
       },
     ],
-    demoStatus: "デモ公開準備中",
   },
 ];
