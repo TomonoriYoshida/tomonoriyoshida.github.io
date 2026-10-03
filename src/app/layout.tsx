@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ogImage, siteDescription, siteTitle, siteUrl } from "@/data/site";
+import { ogImage, siteDescription, siteTitle, siteUrl, xHandle } from "@/data/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: xHandle,
+    creator: xHandle,
     images: [ogImage],
   },
   // Google Search Console ownership of https://tomonoriyoshida.github.io/ (covers the project sites too).
