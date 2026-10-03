@@ -1,5 +1,5 @@
 import { projects, type Project } from "@/data/projects";
-import { siteDescription, siteUrl } from "@/data/site";
+import { siteDescription, siteUrl, xProfileUrl } from "@/data/site";
 
 const githubProfileUrl = "https://github.com/TomonoriYoshida";
 const contactEmail = "tomonori.yoshida.works@gmail.com";
@@ -65,7 +65,7 @@ const profileJsonLd = {
     jobTitle: "ソフトウェアエンジニア",
     description: "バックエンド開発、API設計、プロジェクトマネジメントを手がけるソフトウェアエンジニア",
     knowsAbout: [...languages, "Laravel", "API設計", "プロジェクトマネジメント"],
-    sameAs: [githubProfileUrl],
+    sameAs: [githubProfileUrl, xProfileUrl],
   },
 };
 
@@ -122,13 +122,22 @@ export default function Home() {
             >
               {contactEmail}
             </a>
+            {/* rel="me": these accounts belong to the person this page is about. */}
             <a
               href={githubProfileUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="me noopener noreferrer"
               className="font-medium text-accent underline-offset-4 hover:underline"
             >
               GitHub ↗
+            </a>
+            <a
+              href={xProfileUrl}
+              target="_blank"
+              rel="me noopener noreferrer"
+              className="font-medium text-accent underline-offset-4 hover:underline"
+            >
+              X ↗
             </a>
           </div>
         </div>
