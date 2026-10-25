@@ -8,7 +8,7 @@ export const xHandle = "@T_Y_works";
 export const xProfileUrl = "https://x.com/T_Y_works";
 
 export const siteDescription =
-  "バックエンド開発・設計・運用・プロジェクトマネジメントを手がけるソフトウェアエンジニア Yoshida のポートフォリオです。公開データを集めたAPIと、それを使った一般向けサイトを掲載しています。";
+  "バックエンド開発・設計・運用・プロジェクトマネジメントを手がけるソフトウェアエンジニア Yoshida のポートフォリオです。公開データを集めたAPIと、それを使った一般向けサイト、ブラウザで鳴るジェネレーティブ音楽の作品を掲載しています。";
 
 /** The link preview image, rendered by src/app/og.png/route.tsx. */
 export const ogImage = {

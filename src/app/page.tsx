@@ -10,6 +10,11 @@ function ProjectCard({ project }: { project: Project }) {
     <article className="rounded-xl border border-border bg-surface p-6 sm:p-8">
       <h3 className="text-xl font-semibold tracking-tight">{project.name}</h3>
       <p className="mt-3 leading-7 text-muted">{project.summary}</p>
+      {project.note && (
+        <p className="mt-4 border-l-2 border-accent pl-4 text-sm leading-6">
+          {project.note}
+        </p>
+      )}
 
       <h4 className="mt-6 text-sm font-semibold">設計・実装のポイント</h4>
       <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-6 text-muted">
@@ -97,7 +102,7 @@ export default function Home() {
             プロジェクトマネージャーとしてチームを率いた経験もあり、エンドユーザーへのヒアリングを含む要件整理から、設計・実装・運用まで一貫して担当できます。
           </p>
           <p>
-            下のプロジェクトは、公開データの取込からAPI、画面、本番サーバーの運用までを一人で作り、実際に公開しているものです。画面まで含めた小〜中規模の案件も、ご相談いただけます。
+            下のプロジェクトは、どれも一人で作り、実際に公開しているものです。公開データの取込からAPI、画面、本番サーバーの運用までを手がけた医療施設のプロジェクトのほか、趣味で作ったブラウザで鳴る音楽作品も載せています。画面まで含めた小〜中規模の案件も、ご相談いただけます。
           </p>
         </div>
 
