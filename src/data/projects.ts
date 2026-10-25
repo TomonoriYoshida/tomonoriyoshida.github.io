@@ -11,6 +11,8 @@ export type Project = {
   links: ProjectLink[];
   /** Shown instead of a demo link while the project has no public deployment. */
   demoStatus?: string;
+  /** A short offer to readers, shown highlighted under the summary. */
+  note?: string;
 };
 
 export const projects: Project[] = [
@@ -86,6 +88,38 @@ export const projects: Project[] = [
       {
         label: "GitHub",
         href: "https://github.com/TomonoriYoshida/open-clinic-finder",
+      },
+    ],
+  },
+  {
+    name: "sound-sketch",
+    summary:
+      "ブラウザだけで音が鳴り続ける、ジェネレーティブ音楽のスケッチ集です。ジェネレーティブ音楽とは、決まった楽譜ではなく、あらかじめ作った仕組みから音楽が生まれ続ける作品のことです。ブライアン・イーノとスティーヴ・ライヒの手法に着想を得て、趣味で作りました。",
+    note:
+      "録音した素材を使わず、すべての音をその場で合成しているため、美術館やギャラリー、店舗などで使用料のかからない館内BGMとしても使えると考えています。ご要望があれば、場所に合わせた音階・速さ・音色などのカスタマイズにも対応します。",
+    highlights: [
+      "3作品を収録。波紋が画面の端や別の波紋にぶつかると鳴る「Ripples」、周期が少しずつ違うループがずれていく「Phase」、長さの違うテープループが重なる「Loops」。クリックやタップで音を置けるほか、フレーズを録音して重ねることもできる",
+      "日本・中国・中近東・インド・バリ島などの音階を25種類収録。四分音や、オクターブを5等分するスレンドロなど、ピアノの鍵盤にない音程も鳴らせる",
+      "現在地や世界の主要都市の天気を取り込み、音に反映する。天気で音階、気温で速さ、雨の量で音の多さ、雲の量で響きの深さが変わる。音域や音色も、割り切れない周期でゆっくり移り変わるため、同じ響きはほとんど二度と来ない",
+      "日本語と英語の切り替え、スマートフォンの細い画面に合わせたレイアウト、操作の説明の表示に対応",
+      "位置情報は約1kmの精度に丸めてから天気の取得にだけ使い、ほかには送らない。アクセスの計測にも、Cookieを使わない方式を選んでいる",
+    ],
+    techStack: [
+      "TypeScript",
+      "Vite",
+      "Tone.js",
+      "Web Audio API",
+      "Open-Meteo API",
+      "GitHub Actions",
+    ],
+    links: [
+      {
+        label: "作品を開く",
+        href: "https://tomonoriyoshida.github.io/sound-sketch/",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/TomonoriYoshida/sound-sketch",
       },
     ],
   },
