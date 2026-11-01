@@ -13,9 +13,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     `${siteUrl}/medical-facility-frontend/dashboard/`,
     `${siteUrl}/medical-facility-frontend/events/`,
     `${siteUrl}/medical-facility-frontend/about/`,
-    `${siteUrl}/sound-sketch/`,
-    `${siteUrl}/sound-sketch/ripples.html`,
-    `${siteUrl}/sound-sketch/phase.html`,
-    `${siteUrl}/sound-sketch/loops.html`,
   ].map((url) => ({ url }));
 }
