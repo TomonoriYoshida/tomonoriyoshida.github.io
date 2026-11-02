@@ -115,11 +115,11 @@ export const projects: Project[] = [
     links: [
       {
         label: "作品を開く",
-        href: "https://etudes-ouvertes.github.io/sound-sketch/",
+        href: "https://etudesouvertes.github.io/sound-sketch/",
       },
       {
         label: "GitHub",
-        href: "https://github.com/etudes-ouvertes/sound-sketch",
+        href: "https://github.com/etudesouvertes/sound-sketch",
       },
     ],
   },
